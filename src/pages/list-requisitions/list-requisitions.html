@@ -23,7 +23,7 @@
   <ion-list>
 
     <ion-item-sliding *ngFor="let item of getList()">
-      <ion-item>
+      <ion-item >
               <h2> {{ item.title }} </h2>
               <p color='text'> {{item.date | date: 'd MMM' }} </p>
 
@@ -31,14 +31,14 @@
             
         
       </ion-item>
-      <ion-item-options side="right">
-        <button ion-button clear (click)="openRequisition(item)">
+      <ion-item-options  side="right">
+        <button style="border-left: 2px solid gray " class="buttonIcon" ion-button clear (click)="openRequisition(item)">
           <ion-icon class="eyeIcon" name="eye"> </ion-icon>
         </button>
-        <button ion-button clear (click)="editRequisition(item)">
-          <ion-icon class="createIcon" name="create"> </ion-icon>
+        <button class="buttonIcon" ion-button clear (click)="editRequisition(item)">
+          <ion-icon class="editIcon" name="create"> </ion-icon>
         </button>
-        <button ion-button clear (click)="deleteRequisition(item)">
+        <button class="buttonIcon" ion-button clear (click)="deleteRequisition(item)">
           <ion-icon class="trashIcon" name="trash"> </ion-icon>
         </button>
       </ion-item-options>

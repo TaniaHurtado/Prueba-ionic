@@ -17,14 +17,53 @@
 
 
 .iconm{
-
     font-size: 2.5rem;
     color:#3898f9;
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
+}
+.eyeIcon{
+    font-size: 2.5rem;
+    color: rgb(26, 171, 197)
+}
+.trashIcon{
+    font-size: 2.5rem;
+    color: rgb(228, 49, 49)
+}
+.starIcon{
+    font-size: 2.5rem;
+    color:#ffb500;
+    position: relative;
 }
 
+.createIcon{
+    font-size: 2.5rem;
+    color: rgb(26, 171, 197)
+}
+.editIcon{
+    font-size: 2.5rem;
+    color: rgb(73, 180, 118)
+}
 
+.buttonIcon{
+    border: none;
+	background:rgb(252, 250, 250);
+	transition: all 500ms ease; 
+    
+}
+.buttonIcon:hover{
+    background: rgb(158, 209, 233);
+}
+
+.itemButton:before{
+    
+    position: absolute;
+    background: rgba(255,255,255,0.3);
+    transition: all 2s ease;   
+
+}
+
+.itemButton:hover:before {
+	width: 100%;
+}
 
 ion-title{   
     margin-right: 48px;
@@ -36,4 +75,5 @@ ion-title{
     font-size: 1.5rem !important; 
     }
 }
+
     

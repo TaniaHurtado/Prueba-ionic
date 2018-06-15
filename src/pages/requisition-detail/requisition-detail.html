@@ -19,12 +19,12 @@
   <ion-grid>
     <ion-row>
       <ion-col text-center col-4>
-        <button class="buttond"  (click)="editRequisition(item)">
+        <button class="buttonIcon"  (click)="editRequisition(item)">
           <ion-icon class="editIcon" name="create"></ion-icon>
         </button>
       </ion-col>
       <ion-col text-center col-4>
-        <button class="buttond" (click)="deleteRequisition(item)">
+        <button class="buttonIcon" (click)="deleteRequisition(item)">
           <ion-icon class="trashIcon" name="trash"></ion-icon>
         </button>
       </ion-col>
@@ -36,7 +36,7 @@
     </ion-row>
   </ion-grid>
 
-  <div>
+  <div padding>
     <ion-grid>
       <ion-row>
         <ion-col col-6>
@@ -54,7 +54,30 @@
     <p>{{item.description}}</p>
   </div>
 
-  
+  <div padding >
+      <ion-grid>
+          <ion-row>
+            <ion-col text-center col-6>
+              <button class="buttonIcon" icon-start (click)="isNote()">
+                <ion-icon class="editIcon" name="clipboard"></ion-icon>
+                Notas
+              </button>
+            </ion-col>
+            <ion-col text-center col-6>
+              <button class="buttonIcon" icon-start (click)="isFile()">
+                <ion-icon class="trashIcon" name="document"></ion-icon>
+                Archivos
+              </button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+  </div>
+  <div *ngIf="note">
+      <textarea placeholder="Agrega notas aquí" [(ngModel)]="item.note" name="note" cols="40" rows="5"></textarea>
+  </div>
 
+  <div *ngIf="file">
+      <ion-input type="file" [(ngModel)]="item.file" name="file" (change)="getFile()"></ion-input>
+  </div>
 </ion-content>
 

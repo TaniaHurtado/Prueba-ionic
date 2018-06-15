@@ -30540,9 +30540,54 @@ ion-navbar.toolbar {
 .iconm {
   font-size: 2.5rem;
   color: #3898f9;
-  -webkit-transition-duration: 0.4s;
-  /* Safari */
-  transition-duration: 0.4s;
+}
+
+.eyeIcon {
+  font-size: 2.5rem;
+  color: #1aabc5;
+}
+
+.trashIcon {
+  font-size: 2.5rem;
+  color: #e43131;
+}
+
+.starIcon {
+  font-size: 2.5rem;
+  color: #ffb500;
+  position: relative;
+}
+
+.createIcon {
+  font-size: 2.5rem;
+  color: #1aabc5;
+}
+
+.editIcon {
+  font-size: 2.5rem;
+  color: #49b476;
+}
+
+.buttonIcon {
+  border: none;
+  background: #fcfafa;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+
+.buttonIcon:hover {
+  background: #9ed1e9;
+}
+
+.itemButton:before {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.3);
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+}
+
+.itemButton:hover:before {
+  width: 100%;
 }
 
 ion-title {
@@ -30634,6 +30679,10 @@ page-list-requisitions .buttonf .iconf:active {
 
 page-requisition-detail .buttond {
   background-color: rgba(255, 255, 255, 0.5);
+}
+
+page-requisition-detail .buttond:active {
+  background-color: #9bddee;
 }
 
 page-requisition-detail .createIcon {

@@ -17,6 +17,8 @@ import { RequisitionsProvider } from '../../providers/requisitions/requisitions'
 export class RequisitionDetailPage {
   item: any;
   priority: boolean;
+  note: boolean;
+  file: boolean;
   
   constructor(public navCtrl: NavController, public navParams: NavParams,public requisitions: RequisitionsProvider,) {
     this.item =  navParams.get('item');
@@ -35,5 +37,15 @@ export class RequisitionDetailPage {
     this.requisitions.deleteRequisitionItem(item);
     this.navCtrl.pop();
   }
-
+  isNote(){
+    this.note=true;
+    this.file=false;
+  }
+  isFile(){
+    this.file=true;
+    this.note=false;
+  }
+  getFile(){
+    console.log("task file:", this.item.file)
+  }
 }
