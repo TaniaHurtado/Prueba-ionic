@@ -1,0 +1,32 @@
+<ion-menu id="leftMenu" [content]="content" type="overlay">
+
+  <ion-header no-border>
+    <ion-toolbar>
+      <ion-title>
+        <img src="assets/imgs/logo4.png" alt="logo2"> </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+  <ion-content>
+    <ion-list>
+      <button menuClose ion-item icon-start (click)="openPage(pages[0])">
+        <ion-icon name="home"></ion-icon>Home
+      </button>
+      <button menuClose ion-item icon-start (click)="openPage(pages[1])">
+        <ion-icon name="list-box"></ion-icon>Mis Tareas
+      </button>
+      <button menuClose ion-item icon-start (click)="openPage(pages[2])">
+        <ion-icon name="list"></ion-icon>Lista de Compras
+      </button>
+      <button menuClose ion-item icon-start (click)="openPage(pages[1])">
+        <ion-icon name="book"></ion-icon>Libros
+      </button>
+        <button menuClose ion-item icon-start (click)="openPage(pages[1])">
+          <ion-icon name="settings"></ion-icon>Configuración
+          </button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-nav id="nav" #content [root]="rootPage"></ion-nav>

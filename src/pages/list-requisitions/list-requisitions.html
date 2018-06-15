@@ -1,0 +1,61 @@
+<!--
+  Generated template for the ListRequisitionsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>Mis Solicitudes</ion-title>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item-sliding *ngFor="let item of getList()">
+      <ion-item>
+        {{ item.title }}
+      </ion-item>
+      <ion-item-options side="left">
+        <button ion-button class="eyeButton" (click)="openRequisition(item)">
+          <ion-icon name="eye"> </ion-icon>
+        </button>
+        <button ion-button color="blue" (click)="editRequisition(item)">
+          <ion-icon name="create"> </ion-icon>
+        </button>
+        <button ion-button color="danger" (click)="deleteRequisition(item)">
+          <ion-icon name="trash"> </ion-icon>
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+    <button ion-item icon-start (click)="addRequisition()">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-4>
+        <button ion-button clear (click)="changeFilter('today')">
+          <ion-icon name="clock"> </ion-icon>
+        </button>
+      </ion-col>
+      <ion-col col-4>
+        <button ion-button clear (click)="changeFilter('tomorrow')">
+          <ion-icon class="iconFooter" name="partly-sunny"> </ion-icon>
+        </button>
+      </ion-col>
+      <ion-col col-4>
+        <button ion-button clear (click)="changeFilter('other')">
+          <ion-icon name="calendar"> </ion-icon>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>

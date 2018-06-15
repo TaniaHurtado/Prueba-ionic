@@ -1,0 +1,40 @@
+<!--
+  Generated template for the CreateRequisitionsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>create-requisitions</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <form (ngSubmit)="logForm()">
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="task.title" name="title" placeholder="Título"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-textarea [(ngModel)]="task.description" name="description" placeholder="Descripción"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="task.place" name="place" placeholder="Lugar"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="task.responsable" name="responsable" placeholder="Responsable" ></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="task.date" name="date" placeholder="Fecha"></ion-datetime>
+    </ion-item>
+
+    <button ion-button icon-start type="submit" block>
+      <ion-icon name="checkmark-circle"></ion-icon> Crear
+       
+    </button>
+   
+  </form>
+</ion-content>
