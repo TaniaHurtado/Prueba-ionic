@@ -24,19 +24,12 @@
 
     <ion-item-sliding *ngFor="let item of getList()">
       <ion-item>
-        <ion-grid>
-          <ion-row>
-            <ion-col col-8>
               <h2> {{ item.title }} </h2>
               <p color='text'> {{item.date | date: 'd MMM' }} </p>
 
-            </ion-col>
-            <ion-col col-4>
-              <ion-icon name="star" class="starIcon" *ngIf="item.priority == true"> </ion-icon>
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-
+              <ion-icon name="star" class="starIcon" *ngIf="item.priority == true" item-end> </ion-icon>
+            
+        
       </ion-item>
       <ion-item-options side="right">
         <button ion-button clear (click)="openRequisition(item)">
