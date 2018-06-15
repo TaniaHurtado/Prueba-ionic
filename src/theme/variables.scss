@@ -34,12 +34,13 @@ $app-direction: ltr;
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:    #488aff,
+  primary:    #3898f9,
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
   dark:       #222,
-  text:       rgb(133, 185, 238)
+  text:       rgb(133, 185, 238),
+  navbarColor: #3898f9
 );
 
 
@@ -87,3 +88,11 @@ $colors: (
 
 @import "roboto";
 @import "noto-sans";
+
+
+@font-face {
+  font-family: 'emmasophia';
+  src:url('../assets/fonts/emmasophia.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

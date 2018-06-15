@@ -6,8 +6,8 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>create-requisitions</ion-title>
+  <ion-navbar color="navbarColor">
+    <ion-title>Nueva</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -25,16 +25,17 @@
       <ion-input type="text" [(ngModel)]="task.place" name="place" placeholder="Lugar"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-input type="text" [(ngModel)]="task.responsable" name="responsable" placeholder="Responsable" ></ion-input>
+      <ion-input type="text" [(ngModel)]="task.responsable" name="responsable" placeholder="Responsable"></ion-input>
     </ion-item>
     <ion-item>
-        <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="task.date" name="date" placeholder="Fecha"></ion-datetime>
+      <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="task.date" name="date" placeholder="Fecha"></ion-datetime>
     </ion-item>
+    <div text-center>
+      <button center ion-button icon-start type="submit">
+        <ion-icon name="checkmark-circle"></ion-icon> Crear
+      </button>
+    </div>
 
-    <button ion-button icon-start type="submit" block>
-      <ion-icon name="checkmark-circle"></ion-icon> Crear
-       
-    </button>
-   
+
   </form>
 </ion-content>

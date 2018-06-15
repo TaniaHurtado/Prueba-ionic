@@ -1,9 +1,43 @@
 page-list-requisitions {
-    .eyeButton{
-        background: rgb(111, 236, 159)
+    .eyeIcon{
+        font-size: 2.5rem;
+        color: rgb(26, 171, 197)
     }
-    .iconFooter{
-        width: 100%;
-        height: auto;
+    .createIcon{
+        font-size: 2.5rem;
+        color: rgb(73, 180, 118)
     }
+    .trashIcon{
+        font-size: 2.5rem;
+        color: rgb(228, 49, 49)
+    }
+    .starIcon{
+        font-size: 2.5rem;
+        color:#ffb500;
+        position: relative;
+    }
+
+    .buttonf{
+        color: rgba(158, 158, 158, 0.2);
+        text-align: center;
+        .iconf{
+            
+            font-size: 4rem;
+            color: #76768e;
+            -webkit-transition-duration: 0.4s; /* Safari */
+            transition-duration: 0.4s;
+        }
+        
+        .iconf:hover {
+            color: #3898f9; 
+            
+        }
+        .iconf:active {
+            color: #3898f9; 
+        }  
+
+    }
+
+
+   
 }

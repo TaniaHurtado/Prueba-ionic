@@ -14,3 +14,26 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+
+.iconm{
+
+    font-size: 2.5rem;
+    color:#3898f9;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+
+
+ion-title{   
+    margin-right: 48px;
+    text-align: center;
+    font-family: emmasophia;
+    margin-bottom: -10px;
+    line-height: 48px;
+    *{
+    font-size: 1.5rem !important; 
+    }
+}
+    

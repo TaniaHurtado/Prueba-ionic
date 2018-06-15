@@ -13,8 +13,8 @@ export class RequisitionsProvider {
 
   //requisitionsList: Array<any>
   requisitionsList = [
-    { id: 1, title: 'Crear Formulario',description: 'Agregar botón de crear y agregar campos', responsable: 'Juan Perez', place: 'Edificio 401-224', date: new Date('06-14-2018')},
-    { id: 2, title: 'Botón y vista editar', description: 'Agregar botón de editar y cambiar campos',responsable: 'Maria Pinto', place: 'Oficina', date: new Date('06-14-2018')},
+    { id: 1, title: 'Crear Formulario',description: 'Agregar botón de crear y agregar campos', responsable: 'Juan Perez', place: 'Edificio 401-224', date: new Date('06-14-2018'), priority: true},
+    { id: 2, title: 'Botón y vista editar', description: 'Agregar botón de editar y cambiar campos',responsable: 'Maria Pinto', place: 'Oficina', date: new Date('06-14-2018'),priority: true},
     { id: 3, title: 'Arreglar vistas',description: 'Arreglar y cuadrar las vistas ', responsable: 'Ivan Rojas', place: 'Casa',date: new Date('06-14-2018')},
     { id: 4, title: 'Agregar datos',description: 'Agregar mas datos a la lista ', responsable: 'Ivan Rojas', place: 'Oficina',date: new Date('06-15-2018')},
     { id: 5, title: 'Hacer filtros',description: 'Fitrar por fechas ', responsable: 'Ivan Rojas', place: 'Oficina',date: new Date('06-15-2018')},

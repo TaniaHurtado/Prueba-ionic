@@ -6,7 +6,7 @@
 -->
 
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="navbarColor">
     <ion-title>Mis Solicitudes</ion-title>
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
@@ -15,45 +15,62 @@
 </ion-header>
 
 <ion-content>
+  
+  <ion-label color='primary' padding > Desliza a la izquierda para mas opciones </ion-label>
+  <ion-fab bottom right>
+  <button ion-fab color="primary"  (click)="addRequisition()" ><ion-icon name="add"></ion-icon></button>
+  </ion-fab>
   <ion-list>
+
     <ion-item-sliding *ngFor="let item of getList()">
       <ion-item>
-        {{ item.title }}
+        <ion-grid>
+          <ion-row>
+            <ion-col col-8>
+              <h2> {{ item.title }} </h2>
+              <p color='text'> {{item.date | date: 'd MMM' }} </p>
+
+            </ion-col>
+            <ion-col col-4>
+              <ion-icon name="star" class="starIcon" *ngIf="item.priority == true"> </ion-icon>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
       </ion-item>
-      <ion-item-options side="left">
-        <button ion-button class="eyeButton" (click)="openRequisition(item)">
-          <ion-icon name="eye"> </ion-icon>
+      <ion-item-options side="right">
+        <button ion-button clear (click)="openRequisition(item)">
+          <ion-icon class="eyeIcon" name="eye"> </ion-icon>
         </button>
-        <button ion-button color="blue" (click)="editRequisition(item)">
-          <ion-icon name="create"> </ion-icon>
+        <button ion-button clear (click)="editRequisition(item)">
+          <ion-icon class="createIcon" name="create"> </ion-icon>
         </button>
-        <button ion-button color="danger" (click)="deleteRequisition(item)">
-          <ion-icon name="trash"> </ion-icon>
+        <button ion-button clear (click)="deleteRequisition(item)">
+          <ion-icon class="trashIcon" name="trash"> </ion-icon>
         </button>
       </ion-item-options>
     </ion-item-sliding>
-    <button ion-item icon-start (click)="addRequisition()">
-      <ion-icon name="add"></ion-icon>
-    </button>
+    
   </ion-list>
 </ion-content>
 
 <ion-footer>
   <ion-grid>
     <ion-row>
-      <ion-col col-4>
-        <button ion-button clear (click)="changeFilter('today')">
-          <ion-icon name="clock"> </ion-icon>
+      <ion-col text-center col-4>
+        <button class="buttonf" ion-button clear (click)="changeFilter('today')">
+          <ion-icon class="iconf" name="clock"> </ion-icon>
         </button>
       </ion-col>
-      <ion-col col-4>
-        <button ion-button clear (click)="changeFilter('tomorrow')">
-          <ion-icon class="iconFooter" name="partly-sunny"> </ion-icon>
+      <ion-col text-center col-4>
+        <button class="buttonf" ion-button clear (click)="changeFilter('tomorrow')">
+          <ion-icon class="iconf" name="partly-sunny"> </ion-icon>
         </button>
+        
       </ion-col>
-      <ion-col col-4>
-        <button ion-button clear (click)="changeFilter('other')">
-          <ion-icon name="calendar"> </ion-icon>
+      <ion-col text-center col-4>
+        <button class="buttonf" ion-button clear (click)="changeFilter('other')">
+          <ion-icon class="iconf" name="calendar"> </ion-icon>
         </button>
       </ion-col>
     </ion-row>
