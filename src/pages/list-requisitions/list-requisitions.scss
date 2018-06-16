@@ -1,22 +1,4 @@
-page-list-requisitions {
-    .eyeIcon{
-        font-size: 2.5rem;
-        color: rgb(26, 171, 197)
-    }
-    .createIcon{
-        font-size: 2.5rem;
-        color: rgb(73, 180, 118)
-    }
-    .trashIcon{
-        font-size: 2.5rem;
-        color: rgb(228, 49, 49)
-    }
-    .starIcon{
-        font-size: 2.5rem;
-        color:#ffb500;
-        position: relative;
-    }
-
+page-list-requisitions {   
     .buttonf{
         color: rgba(158, 158, 158, 0.2);
         text-align: center;
@@ -34,10 +16,14 @@ page-list-requisitions {
         }
         .iconf:active {
             color: #3898f9; 
-        }  
+        } 
 
     }
 
+    .buttonf:hover{
+        background-color:  rgb(252, 250, 250);
+    }
+    
 
    
 }

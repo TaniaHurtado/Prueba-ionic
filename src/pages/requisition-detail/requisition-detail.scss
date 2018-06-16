@@ -1,23 +1,12 @@
 page-requisition-detail {
     .buttond{
-        background-color: rgba(255, 255, 255, 0.5);
+        background-color: rgb(255, 255, 255);
     }
 
     .buttond:active{
         background-color: rgb(155, 221, 238)
     }
-    .createIcon{
-        font-size: 2.5rem;
-        color: rgb(26, 171, 197)
-    }
-    .editIcon{
-        font-size: 2.5rem;
-        color: rgb(73, 180, 118)
-    }
-    .trashIcon{
-        font-size: 2.5rem;
-        color: rgb(228, 49, 49)
-    }
+    
 
     .check{
         margin-top: 5px;

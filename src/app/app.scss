@@ -45,24 +45,17 @@
 
 .buttonIcon{
     border: none;
-	background:rgb(252, 250, 250);
+	background-color:rgb(252, 250, 250);
 	transition: all 500ms ease; 
     
 }
 .buttonIcon:hover{
-    background: rgb(158, 209, 233);
+    background: rgb(185, 228, 248);
 }
 
-.itemButton:before{
-    
-    position: absolute;
-    background: rgba(255,255,255,0.3);
-    transition: all 2s ease;   
+button:hover {
 
-}
-
-.itemButton:hover:before {
-	width: 100%;
+    background-color: rgb(172, 217, 228);
 }
 
 ion-title{   

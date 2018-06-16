@@ -30570,24 +30570,17 @@ ion-navbar.toolbar {
 
 .buttonIcon {
   border: none;
-  background: #fcfafa;
+  background-color: #fcfafa;
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
 }
 
 .buttonIcon:hover {
-  background: #9ed1e9;
+  background: #b9e4f8;
 }
 
-.itemButton:before {
-  position: absolute;
-  background: rgba(255, 255, 255, 0.3);
-  -webkit-transition: all 2s ease;
-  transition: all 2s ease;
-}
-
-.itemButton:hover:before {
-  width: 100%;
+button:hover {
+  background-color: #acd9e4;
 }
 
 ion-title {
@@ -30616,7 +30609,7 @@ page-home .bar-button-menutoggle {
 }
 
 page-home .divSlides {
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 page-home .divSlides .imgCarousel {
@@ -30633,27 +30626,6 @@ page-home h3 {
 page-home p {
   margin-top: 50px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-page-list-requisitions .eyeIcon {
-  font-size: 2.5rem;
-  color: #1aabc5;
-}
-
-page-list-requisitions .createIcon {
-  font-size: 2.5rem;
-  color: #49b476;
-}
-
-page-list-requisitions .trashIcon {
-  font-size: 2.5rem;
-  color: #e43131;
-}
-
-page-list-requisitions .starIcon {
-  font-size: 2.5rem;
-  color: #ffb500;
-  position: relative;
 }
 
 page-list-requisitions .buttonf {
@@ -30677,27 +30649,16 @@ page-list-requisitions .buttonf .iconf:active {
   color: #3898f9;
 }
 
+page-list-requisitions .buttonf:hover {
+  background-color: #fcfafa;
+}
+
 page-requisition-detail .buttond {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: white;
 }
 
 page-requisition-detail .buttond:active {
   background-color: #9bddee;
-}
-
-page-requisition-detail .createIcon {
-  font-size: 2.5rem;
-  color: #1aabc5;
-}
-
-page-requisition-detail .editIcon {
-  font-size: 2.5rem;
-  color: #49b476;
-}
-
-page-requisition-detail .trashIcon {
-  font-size: 2.5rem;
-  color: #e43131;
 }
 
 page-requisition-detail .check {
