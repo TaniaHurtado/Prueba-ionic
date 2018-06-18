@@ -24,6 +24,54 @@ page-list-requisitions {
         background-color:  rgb(252, 250, 250);
     }
     
+    .arrow{
+    display: inline-block;
+    font-size: 3rem;
+    -webkit-animation: horizontal 2s ease infinite;
+    animation: horizontal 2s ease infinite;
+    }
 
+    @keyframes horizontal{
+        0%{
+            -webkit-transform:translate(0,0);
+            transform:translate(0,0)
+        }
+        6%{
+            -webkit-transform:translate(-100px,0);
+            transform:translate(-100px,0)
+        }
+        12%{
+            -webkit-transform:translate(0,0);
+            transform:translate(0,0)
+        }
+        18%{
+            -webkit-transform:translate(-100px,0);
+            transform:translate(-100px,0)
+        }
+        24%{
+            -webkit-transform:translate(0,0);
+            transform:translate(0,0)
+        }
+        30%{
+            -webkit-transform:translate(-100px,0);
+            transform:translate(-100px,0)
+        }
+        100%,36%{
+            -webkit-transform:translate(0,0);
+            transform:translate(0,0)
+        }
+    }
+    .faa-horizontal.animated,.faa-horizontal.animated-hover:hover,.faa-parent.animated-hover:hover>.faa-horizontal{
+        -webkit-animation:horizontal 2s ease infinite;
+        animation:horizontal 2s ease infinite
+    }
+    .faa-horizontal.animated-hover.faa-fast:hover,.faa-horizontal.animated.faa-fast,.faa-parent.animated-hover:hover>.faa-horizontal.faa-fast{
+        -webkit-animation:horizontal 1s ease infinite;
+        animation:horizontal 1s ease infinite
+    }
+    .faa-horizontal.animated-hover.faa-slow:hover,.faa-horizontal.animated.faa-slow,.faa-parent.animated-hover:hover>.faa-horizontal.faa-slow{
+        -webkit-animation:horizontal 3s ease infinite;
+        animation:horizontal 3s ease infinite
+    }
    
 }

@@ -15,6 +15,7 @@ import { EditRequisitionPage } from '../pages/edit-requisition/edit-requisition'
 import { SignupPage } from '../pages/signup/signup';
 import { LoginPage } from '../pages/login/login';
 import { UserProvider } from '../providers/user/user';
+import { ProfilePage } from '../pages/profile/profile';
 @NgModule({
   declarations: [
     MyApp,

@@ -52,7 +52,7 @@ export class UserProvider {
       }
     }
 
-    return this.http.post(this.url + '/' + endpoint, reqOpts).toPromise().then(data => {
+    return this.http.get(this.url + '/' + endpoint, reqOpts).toPromise().then(data => {
       let anyData: any = data;
       let listUser = JSON.parse(anyData.args.data);
       let user = listUser.find(item => (item.email == credentials.email && item.password == credentials.password))
@@ -67,55 +67,14 @@ export class UserProvider {
     );
   }
 
-  signup(endpoint: string, params?: any, reqOpts?: any): Promise<any> {
-    if (!reqOpts) {
-      reqOpts = {
-        params: new HttpParams()
-      };
+  signup(endpoint: string, params: any, reqOpts?: any): Promise<any> {
+    console.log("params",params);
+    
+    return this.http.post(this.url + '/' + endpoint, params, reqOpts).toPromise().then(data => {
+      this.userList.push(params);
+      return params;
     }
-
-    // Support easy query params for GET requests
-    if (params) {
-      reqOpts.params = new HttpParams();
-      for (let k in params) {
-        reqOpts.params = reqOpts.params.set(k, params[k]);
-      }
-    }
-
-    return this.http.post(this.url + '/' + endpoint, body, reqOpts).toPromise().then(data => {
-      let anyData: any = data;
-      let listUser = JSON.parse(anyData.args.data);
-      let user = listUser.find(item => (item.email == credentials.email && item.password == credentials.password))
-      if (user) {
-        return user
-      } else {
-        return Promise.reject({ status: 401, data: "unautorized" });
-      }
-
-    }
-
     );
-  }
-
-
-
-
-  getList(endpoint: string, params = this.params, reqOpts?: any): Promise<any> {
-    if (!reqOpts) {
-      reqOpts = {
-        params: new HttpParams()
-      };
-    }
-
-    // Support easy query params for GET requests
-    if (params) {
-      reqOpts.params = new HttpParams();
-      for (let k in params) {
-        reqOpts.params = reqOpts.params.set(k, params[k]);
-      }
-    }
-
-    return this.http.get(this.url + '/' + endpoint, reqOpts).toPromise();
   }
 
 }

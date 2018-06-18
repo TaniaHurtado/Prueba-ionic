@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar color="navbarColor">
+    <ion-title>SIMPLY TASKS</ion-title>
+    <button ion-button menuToggle >
+      <ion-icon name="menu" ></ion-icon>
+    </button>
+  </ion-navbar>
+
+</ion-header>
+<ion-content padding>
+
+  <h3 >ORGANIZA TU DÍA CON SIMPLY TASKS </h3>
+  <p>
+    Aquí podrás agendar tus tareas diarias, revisar tu lista de mercado, agregar notas y recordatorios y mucho mas..
+
+  </p>
+
+  <div class="divSlides">
+    <ion-slides loop="true"  pager="true" speed="800" autoplay="3000" >
+      <ion-slide *ngFor="let image of [2,3,4]">
+        <img class="imgCarousel" data-src="./assets/imgs/logo{{image}}.png">
+      </ion-slide>
+    </ion-slides>
+  </div>
+<div text-center padding >
+    
+    <button padding ion-button menuToggle>
+      Probar 
+  </button>
+</div>
+  
+
+</ion-content>

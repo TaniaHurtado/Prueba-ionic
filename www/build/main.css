@@ -30538,7 +30538,7 @@ ion-navbar.toolbar {
 }
 
 .iconm {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   color: #3898f9;
 }
 
@@ -30653,6 +30653,90 @@ page-list-requisitions .buttonf:hover {
   background-color: #fcfafa;
 }
 
+page-list-requisitions .arrow {
+  display: inline-block;
+  font-size: 3rem;
+  -webkit-animation: horizontal 2s ease infinite;
+  animation: horizontal 2s ease infinite;
+}
+
+@-webkit-keyframes horizontal {
+  0% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  6% {
+    -webkit-transform: translate(-100px, 0);
+    transform: translate(-100px, 0);
+  }
+  12% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  18% {
+    -webkit-transform: translate(-100px, 0);
+    transform: translate(-100px, 0);
+  }
+  24% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  30% {
+    -webkit-transform: translate(-100px, 0);
+    transform: translate(-100px, 0);
+  }
+  100%, 36% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes horizontal {
+  0% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  6% {
+    -webkit-transform: translate(-100px, 0);
+    transform: translate(-100px, 0);
+  }
+  12% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  18% {
+    -webkit-transform: translate(-100px, 0);
+    transform: translate(-100px, 0);
+  }
+  24% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  30% {
+    -webkit-transform: translate(-100px, 0);
+    transform: translate(-100px, 0);
+  }
+  100%, 36% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+}
+
+page-list-requisitions .faa-horizontal.animated, page-list-requisitions .faa-horizontal.animated-hover:hover, page-list-requisitions .faa-parent.animated-hover:hover > .faa-horizontal {
+  -webkit-animation: horizontal 2s ease infinite;
+  animation: horizontal 2s ease infinite;
+}
+
+page-list-requisitions .faa-horizontal.animated-hover.faa-fast:hover, page-list-requisitions .faa-horizontal.animated.faa-fast, page-list-requisitions .faa-parent.animated-hover:hover > .faa-horizontal.faa-fast {
+  -webkit-animation: horizontal 1s ease infinite;
+  animation: horizontal 1s ease infinite;
+}
+
+page-list-requisitions .faa-horizontal.animated-hover.faa-slow:hover, page-list-requisitions .faa-horizontal.animated.faa-slow, page-list-requisitions .faa-parent.animated-hover:hover > .faa-horizontal.faa-slow {
+  -webkit-animation: horizontal 3s ease infinite;
+  animation: horizontal 3s ease infinite;
+}
+
 page-requisition-detail .buttond {
   background-color: white;
 }
@@ -30663,4 +30747,34 @@ page-requisition-detail .buttond:active {
 
 page-requisition-detail .check {
   margin-top: 5px;
+}
+
+page-requisition-detail .profile-image-wrapper {
+  text-align: center;
+  margin: 20px 0;
+}
+
+page-requisition-detail .profile-image-wrapper .profile-image {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+page-requisition-detail .profile-image-wrapper .profile-image-placeholder {
+  display: inline-block;
+  background-color: #eee;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  font-size: 12px;
+}
+
+page-requisition-detail .profile-image-wrapper .profile-image-placeholder ion-icon {
+  font-size: 44px;
+  margin-bottom: -10px;
+  margin-top: 10px;
 }

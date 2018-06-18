@@ -10,7 +10,6 @@ import { UserProvider } from '../../providers/user/user';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
 @Component({
   selector: 'page-login',
   templateUrl: 'login.html',
@@ -27,9 +26,9 @@ export class LoginPage {
   }
   
   doLogin(){
-    this.userService.login("post",this.account).then(data=>{
+    this.userService.login("get",this.account).then(data=>{
       console.log("firstEndpoint",data);
-      this.navCtrl.push(ListRequisitionsPage);
+      this.navCtrl.setRoot(ListRequisitionsPage);
       return "aslkdjalskjd"
     }).then(data=>{
       console.log(data);

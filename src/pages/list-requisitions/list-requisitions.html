@@ -7,17 +7,18 @@
 
 <ion-header>
   <ion-navbar color="navbarColor">
-    <ion-title>Mis Solicitudes</ion-title>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
+    <ion-title>Tareas</ion-title>
+    <button ion-button menuToggle >
+      <ion-icon name="menu" ></ion-icon>
     </button>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
   
-  <ion-label color='primary' padding > Desliza a la izquierda para mas opciones </ion-label>
-  <ion-fab bottom right>
+  <ion-label color='primary' item-end text-right> <ion-icon padding class="arrow" name="ios-arrow-back" > </ion-icon> </ion-label>
+  
+  <ion-fab bottom right >
   <button ion-fab color="primary"  (click)="addRequisition()" ><ion-icon name="add"></ion-icon></button>
   </ion-fab>
   <ion-list>

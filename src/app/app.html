@@ -1,15 +1,13 @@
 <ion-menu id="leftMenu" [content]="content" type="overlay">
-
-  <ion-header no-border>
+ 
+  <ion-header no-border padding>
     <ion-toolbar>
-      <ion-title>
-        <img src="assets/imgs/logo4.png" alt="logo2"> </ion-title>
+        <img src="assets/imgs/logo4.png" alt="logo2"> 
     </ion-toolbar>
   </ion-header>
 
-
   <ion-content>
-    <ion-list>
+    <ion-list padding>
       <button  menuClose ion-item icon-start (click)="openPage(pages[0])">
         <ion-icon class="iconm" name="home"></ion-icon>Home
       </button>
@@ -22,7 +20,7 @@
       <button  menuClose ion-item icon-start (click)="openPage(pages[1])">
         <ion-icon class="iconm" name="book"></ion-icon>Libros
       </button>
-        <button  menuClose ion-item icon-start (click)="openPage(pages[1])">
+        <button   menuClose ion-item icon-start (click)="openPage(pages[1])">
           <ion-icon class="iconm" name="settings"></ion-icon>Configuración
           </button>
     </ion-list>

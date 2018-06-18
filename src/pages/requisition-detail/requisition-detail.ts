@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { EditRequisitionPage } from '../edit-requisition/edit-requisition';
 import { RequisitionsProvider } from '../../providers/requisitions/requisitions';
@@ -15,13 +15,16 @@ import { RequisitionsProvider } from '../../providers/requisitions/requisitions'
   templateUrl: 'requisition-detail.html',
 })
 export class RequisitionDetailPage {
+  @ViewChild('fileInput') fileInput;
   item: any;
   priority: boolean;
   note: boolean;
   file: boolean;
   
-  constructor(public navCtrl: NavController, public navParams: NavParams,public requisitions: RequisitionsProvider,) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+    public requisitions: RequisitionsProvider) {
     this.item =  navParams.get('item');
+    //this.item.file="assets/imgs/logo2.png";
     //console.log('item en detail',this.item);
   }
 
@@ -46,6 +49,27 @@ export class RequisitionDetailPage {
     this.note=false;
   }
   getFile(){
+    this.fileInput.nativeElement.click();
     console.log("task file:", this.item.file)
   }
+
+  processWebImage(event) {
+    let reader = new FileReader();
+    reader.onload = (readerEvent) => {
+
+      let imageData = (readerEvent.target as any).result;
+      this.item.file= imageData;
+    };
+
+    reader.readAsDataURL(event.target.files[0]);
+  }
+
+  getProfileImageStyle() {
+    console.log("file choose",'url(' + this.item.file.value + ')');
+    
+    return 'url(' + this.item.file + ')'
+  }
+
+
+
 }

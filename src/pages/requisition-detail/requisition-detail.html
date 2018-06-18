@@ -77,7 +77,17 @@
   </div>
 
   <div *ngIf="file">
-      <ion-input type="file" [(ngModel)]="item.file" name="file" (change)="getFile()"></ion-input>
+      <input type="file" #fileInput style="visibility: hidden; height: 0px" name="files[]" (change)="processWebImage($event)" />
+      <div class="profile-image-wrapper" (click)="getFile()">
+        
+        <div class="profile-image-placeholder" *ngIf="!this.item.file">
+          <ion-icon name="add"></ion-icon>
+          <div>
+            Archivo
+          </div>
+        </div>
+        <div class="profile-image" [style.backgroundImage]="getProfileImageStyle()" *ngIf="this.item.file"></div>
+      </div>
   </div>
 </ion-content>
 
