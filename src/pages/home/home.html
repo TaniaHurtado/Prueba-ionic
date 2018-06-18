@@ -1,11 +1,6 @@
 <ion-header>
   <ion-navbar color="navbarColor">
     <ion-title>SIMPLY TASKS</ion-title>
-
-    <button id="menu" ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-
   </ion-navbar>
 </ion-header>
 <ion-content padding>
@@ -24,9 +19,12 @@
     </ion-slides>
   </div>
 <div text-center padding >
-    <button padding ion-button  menuToggle icon-start>
-        <ion-icon name="checkmark-circle"> Probar</ion-icon>
+    <button padding ion-button  icon-start (click)="signup()">
+         Regístrate
     </button>
+    <button padding ion-button  icon-start (click)="login()">
+      Inicia sesión 
+  </button>
 </div>
   
 

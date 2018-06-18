@@ -12,6 +12,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { RequisitionDetailPage } from '../pages/requisition-detail/requisition-detail';
 import { CreateRequisitionsPage } from '../pages/create-requisitions/create-requisitions';
 import { EditRequisitionPage } from '../pages/edit-requisition/edit-requisition';
+import { SignupPage } from '../pages/signup/signup';
+import { LoginPage } from '../pages/login/login';
+import { UserProvider } from '../providers/user/user';
 @NgModule({
   declarations: [
     MyApp,
@@ -20,7 +23,9 @@ import { EditRequisitionPage } from '../pages/edit-requisition/edit-requisition'
     ListRequisitionsPage,
     RequisitionDetailPage,
     CreateRequisitionsPage,
-    EditRequisitionPage
+    EditRequisitionPage,
+    LoginPage,
+    SignupPage
   ],
   imports: [
     BrowserModule,
@@ -35,13 +40,16 @@ import { EditRequisitionPage } from '../pages/edit-requisition/edit-requisition'
     ListRequisitionsPage,
     RequisitionDetailPage,
     CreateRequisitionsPage,
-    EditRequisitionPage
+    EditRequisitionPage,
+    LoginPage,
+    SignupPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    RequisitionsProvider
+    RequisitionsProvider,
+    UserProvider
   ]
 })
 export class AppModule {}
