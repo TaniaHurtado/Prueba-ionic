@@ -16,7 +16,7 @@
 
 <ion-content>
   
-  <ion-label color='primary' item-end text-right> <ion-icon padding class="arrow" name="ios-arrow-back" > </ion-icon> </ion-label>
+  <ion-label color='primary' item-end text-right> <ion-icon  class="arrow" name="ios-arrow-back" > </ion-icon> </ion-label>
   
   <ion-fab bottom right >
   <button ion-fab color="primary"  (click)="addRequisition()" ><ion-icon name="add"></ion-icon></button>
@@ -63,8 +63,8 @@
         
       </ion-col>
       <ion-col text-center col-4>
-        <button class="buttonf" ion-button clear (click)="changeFilter('other')">
-          <ion-icon class="iconf" name="calendar"> </ion-icon>
+        <button class="buttonf" ion-button clear (click)="changeFilter('priority')">
+          <ion-icon class="iconf" name="star"> </ion-icon>
         </button>
       </ion-col>
     </ion-row>

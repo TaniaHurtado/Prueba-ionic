@@ -65,9 +65,9 @@ export class ListRequisitionsPage {
           return true;
         else return false;
       })
-      case 'other':
+      case 'priority':
       return this.requisitionsList.filter((item) => {
-        if (item.date < this.addDays(-1))
+        if (item.priority)
           return true;
         else return false;
       })

@@ -13,22 +13,19 @@
 </ion-header>
 
 <ion-content>
-  <form (submit)="doSignup()">
+  <form padding (submit)="doSignup()">
     <ion-list>
 
       <ion-item>
-        <ion-label fixed>Nombre</ion-label>
-        <ion-input type="text" [(ngModel)]="account.name" name="name"></ion-input>
+        <ion-input placeholder="Nombre" type="text" [(ngModel)]="account.name" name="name"></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-label fixed>email</ion-label>
-        <ion-input type="email" [(ngModel)]="account.email" name="email"></ion-input>
+        <ion-input placeholder="Email" type="email" [(ngModel)]="account.email" name="email"></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-label fixed>password</ion-label>
-        <ion-input type="password" [(ngModel)]="account.password" name="password"></ion-input>
+        <ion-input placeholder="Password" type="password" [(ngModel)]="account.password" name="password"></ion-input>
       </ion-item>
 
       <div padding>

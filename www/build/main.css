@@ -30669,18 +30669,6 @@ page-list-requisitions .arrow {
     -webkit-transform: translate(-100px, 0);
     transform: translate(-100px, 0);
   }
-  12% {
-    -webkit-transform: translate(0, 0);
-    transform: translate(0, 0);
-  }
-  18% {
-    -webkit-transform: translate(-100px, 0);
-    transform: translate(-100px, 0);
-  }
-  24% {
-    -webkit-transform: translate(0, 0);
-    transform: translate(0, 0);
-  }
   30% {
     -webkit-transform: translate(-100px, 0);
     transform: translate(-100px, 0);
@@ -30699,18 +30687,6 @@ page-list-requisitions .arrow {
   6% {
     -webkit-transform: translate(-100px, 0);
     transform: translate(-100px, 0);
-  }
-  12% {
-    -webkit-transform: translate(0, 0);
-    transform: translate(0, 0);
-  }
-  18% {
-    -webkit-transform: translate(-100px, 0);
-    transform: translate(-100px, 0);
-  }
-  24% {
-    -webkit-transform: translate(0, 0);
-    transform: translate(0, 0);
   }
   30% {
     -webkit-transform: translate(-100px, 0);
