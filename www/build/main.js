@@ -1,6 +1,6 @@
-webpackJsonp([0],{
+webpackJsonp([1],{
 
-/***/ 101:
+/***/ 102:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -48,7 +48,7 @@ var EditRequisitionPage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-edit-requisition',template:/*ion-inline-start:"/home/inkremental-7/Prueba-ionic/src/pages/edit-requisition/edit-requisition.html"*/'<!--\n  Generated template for the EditRequisitionPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="navbarColor">\n    <ion-title>Editar</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n    <form (ngSubmit)="editForm()">\n      <ion-item>\n        <ion-input type="text" [(ngModel)]="task.title" name="title" placeholder="Título"></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-textarea [(ngModel)]="task.description" name="description" placeholder="Descripción"></ion-textarea>\n      </ion-item>\n      <ion-item>\n        <ion-input type="text" [(ngModel)]="task.place" name="place" placeholder="Lugar"></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-input type="text" [(ngModel)]="task.responsable" name="responsable" placeholder="Responsable" ></ion-input>\n      </ion-item>\n      \n  \n      <button ion-button icon-start type="submit" block>\n        <ion-icon name="checkmark-circle"></ion-icon> Guardar\n         \n      </button>\n     \n    </form>\n  </ion-content>'/*ion-inline-end:"/home/inkremental-7/Prueba-ionic/src/pages/edit-requisition/edit-requisition.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */],
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
             __WEBPACK_IMPORTED_MODULE_2__providers_requisitions_requisitions__["a" /* RequisitionsProvider */], __WEBPACK_IMPORTED_MODULE_3__angular_forms__["a" /* FormBuilder */]])
     ], EditRequisitionPage);
     return EditRequisitionPage;
@@ -63,7 +63,7 @@ var EditRequisitionPage = /** @class */ (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UserProvider; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(52);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -170,19 +170,27 @@ webpackEmptyAsyncContext.id = 115;
 /***/ }),
 
 /***/ 157:
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-function webpackEmptyAsyncContext(req) {
-	// Here Promise.resolve().then() is used instead of new Promise() to prevent
-	// uncatched exception popping up in devtools
-	return Promise.resolve().then(function() {
-		throw new Error("Cannot find module '" + req + "'.");
+var map = {
+	"../pages/books/books.module": [
+		285,
+		0
+	]
+};
+function webpackAsyncContext(req) {
+	var ids = map[req];
+	if(!ids)
+		return Promise.reject(new Error("Cannot find module '" + req + "'."));
+	return __webpack_require__.e(ids[1]).then(function() {
+		return __webpack_require__(ids[0]);
 	});
-}
-webpackEmptyAsyncContext.keys = function() { return []; };
-webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
-module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 157;
+};
+webpackAsyncContext.keys = function webpackAsyncContextKeys() {
+	return Object.keys(map);
+};
+webpackAsyncContext.id = 157;
+module.exports = webpackAsyncContext;
 
 /***/ }),
 
@@ -193,7 +201,7 @@ webpackEmptyAsyncContext.id = 157;
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RequisitionDetailPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__edit_requisition_edit_requisition__ = __webpack_require__(101);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__edit_requisition_edit_requisition__ = __webpack_require__(102);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_requisitions_requisitions__ = __webpack_require__(41);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -267,10 +275,10 @@ var RequisitionDetailPage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-requisition-detail',template:/*ion-inline-start:"/home/inkremental-7/Prueba-ionic/src/pages/requisition-detail/requisition-detail.html"*/'<!--\n  Generated template for the RequisitionDetailPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="navbarColor">\n    <ion-title>Detalles</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n  <h2 text-center color=\'text\'> {{item.title}}</h2>\n  <ion-grid>\n    <ion-row>\n      <ion-col text-center col-4>\n        <button class="buttonIcon"  (click)="editRequisition(item)">\n          <ion-icon class="editIcon" name="create"></ion-icon>\n        </button>\n      </ion-col>\n      <ion-col text-center col-4>\n        <button class="buttonIcon" (click)="deleteRequisition(item)">\n          <ion-icon class="trashIcon" name="trash"></ion-icon>\n        </button>\n      </ion-col>\n      <ion-col text-center col-4>\n\n        <ion-checkbox class="check" [(ngModel)]="item.priority" name="priority"></ion-checkbox>\n\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n\n  <div padding>\n    <ion-grid>\n      <ion-row>\n        <ion-col col-6>\n          <ion-label> Fecha</ion-label>\n          <ion-label color=\'text\'> {{item.date | date: \'d MMM yy\' }} </ion-label>\n        </ion-col>\n        <ion-col col-6>\n          <ion-label> Responsable</ion-label>\n          <ion-label color=\'text\'> {{item.responsable}}</ion-label>\n        </ion-col>\n      </ion-row>\n    </ion-grid>\n  </div>\n  <div>\n    <p>{{item.description}}</p>\n  </div>\n\n  <div padding >\n      <ion-grid>\n          <ion-row>\n            <ion-col text-center col-6>\n              <button padding class="buttonIcon" icon-start (click)="isNote()">\n                <ion-icon class="editIcon" name="clipboard"></ion-icon>\n                Notas\n              </button>\n            </ion-col>\n            <ion-col text-center col-6>\n              <button padding class="buttonIcon" icon-start (click)="isFile()">\n                <ion-icon class="trashIcon" name="document"></ion-icon>\n                Archivos\n              </button>\n            </ion-col>\n          </ion-row>\n        </ion-grid>\n  </div>\n  <div *ngIf="note">\n      <textarea placeholder="Agrega notas aquí" [(ngModel)]="item.note" name="note" cols="40" rows="5"></textarea>\n  </div>\n\n  <div *ngIf="file">\n      <input type="file" #fileInput style="visibility: hidden; height: 0px" name="files[]" (change)="processWebImage($event)" />\n      <div class="profile-image-wrapper" (click)="getFile()">\n        \n        <div class="profile-image-placeholder" *ngIf="!this.item.file">\n          <ion-icon name="add"></ion-icon>\n          <div>\n            Archivo\n          </div>\n        </div>\n        <div class="profile-image" [style.backgroundImage]="getProfileImageStyle()" *ngIf="this.item.file"></div>\n      </div>\n  </div>\n</ion-content>\n\n'/*ion-inline-end:"/home/inkremental-7/Prueba-ionic/src/pages/requisition-detail/requisition-detail.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__providers_requisitions_requisitions__["a" /* RequisitionsProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_requisitions_requisitions__["a" /* RequisitionsProvider */]) === "function" && _c || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_3__providers_requisitions_requisitions__["a" /* RequisitionsProvider */]])
     ], RequisitionDetailPage);
     return RequisitionDetailPage;
-    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=requisition-detail.js.map
@@ -325,7 +333,7 @@ var CreateRequisitionsPage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-create-requisitions',template:/*ion-inline-start:"/home/inkremental-7/Prueba-ionic/src/pages/create-requisitions/create-requisitions.html"*/'<!--\n  Generated template for the CreateRequisitionsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="navbarColor">\n    <ion-title>Nueva</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <form (ngSubmit)="logForm()">\n    <ion-item>\n      <ion-input type="text" [(ngModel)]="task.title" name="title" placeholder="Título"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-textarea [(ngModel)]="task.description" name="description" placeholder="Descripción"></ion-textarea>\n    </ion-item>\n    <ion-item>\n      <ion-input type="text" [(ngModel)]="task.place" name="place" placeholder="Lugar"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-input type="text" [(ngModel)]="task.responsable" name="responsable" placeholder="Responsable"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="task.date" name="date" placeholder="Fecha"></ion-datetime>\n    </ion-item>\n    <div text-center>\n      <button center ion-button icon-start type="submit">\n        <ion-icon name="checkmark-circle"></ion-icon> Crear\n      </button>\n    </div>\n\n\n  </form>\n</ion-content>'/*ion-inline-end:"/home/inkremental-7/Prueba-ionic/src/pages/create-requisitions/create-requisitions.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */],
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
             __WEBPACK_IMPORTED_MODULE_3__providers_requisitions_requisitions__["a" /* RequisitionsProvider */], __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */]])
     ], CreateRequisitionsPage);
     return CreateRequisitionsPage;
@@ -365,7 +373,7 @@ var BuildingsPage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-buildings',template:/*ion-inline-start:"/home/inkremental-7/Prueba-ionic/src/pages/buildings/buildings.html"*/'<!--\n  Generated template for the BuildingsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="navbarColor">\n    <ion-title>Lista</ion-title>\n    <button ion-button menuToggle>\n        <ion-icon name="menu"></ion-icon>\n      </button>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/home/inkremental-7/Prueba-ionic/src/pages/buildings/buildings.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
     ], BuildingsPage);
     return BuildingsPage;
 }());
@@ -410,7 +418,7 @@ var HomePage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-home',template:/*ion-inline-start:"/home/inkremental-7/Prueba-ionic/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar color="navbarColor">\n    <ion-title>SIMPLY TASKS</ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content padding>\n\n  <h3 >ORGANIZA TU DÍA CON SIMPLY TASKS </h3>\n  <p>\n    Aquí podrás agendar tus tareas diarias, revisar tu lista de mercado, agregar notas y recordatorios y mucho mas..\n\n  </p>\n\n  <div class="divSlides">\n    <ion-slides loop="true"  pager="true" speed="800" autoplay="3000" >\n      <ion-slide *ngFor="let image of [2,3,4]">\n        <img class="imgCarousel" data-src="./assets/imgs/logo{{image}}.png">\n      </ion-slide>\n    </ion-slides>\n  </div>\n<div text-center padding >\n    <button padding ion-button  icon-start (click)="signup()">\n         Regístrate\n    </button>\n    <button padding ion-button  icon-start (click)="login()">\n      Inicia sesión \n  </button>\n</div>\n  \n\n</ion-content>'/*ion-inline-end:"/home/inkremental-7/Prueba-ionic/src/pages/home/home.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]])
     ], HomePage);
     return HomePage;
 }());
@@ -480,9 +488,9 @@ var LoginPage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-login',template:/*ion-inline-start:"/home/inkremental-7/Prueba-ionic/src/pages/login/login.html"*/'<!--\n  Generated template for the LoginPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Login</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n  <form padding (submit)="doLogin()">\n    <ion-list>\n\n      <ion-item>\n        <ion-input placeholder="Email" type="email" [(ngModel)]="account.email" name="email"></ion-input>\n      </ion-item>\n\n     \n      <ion-item>\n        <ion-input placeholder="Password" type="password" [(ngModel)]="account.password" name="password"></ion-input>\n      </ion-item>\n\n      <div padding>\n        <button ion-button color="primary" block>login</button>\n      </div>\n\n    </ion-list>\n  </form>\n</ion-content>\n\n'/*ion-inline-end:"/home/inkremental-7/Prueba-ionic/src/pages/login/login.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */],
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
             __WEBPACK_IMPORTED_MODULE_3__providers_user_user__["a" /* UserProvider */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* ToastController */]])
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ToastController */]])
     ], LoginPage);
     return LoginPage;
 }());
@@ -549,9 +557,9 @@ var SignupPage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-signup',template:/*ion-inline-start:"/home/inkremental-7/Prueba-ionic/src/pages/signup/signup.html"*/'<!--\n  Generated template for the SignupPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Registro</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content>\n  <form padding (submit)="doSignup()">\n    <ion-list>\n\n      <ion-item>\n        <ion-input placeholder="Nombre" type="text" [(ngModel)]="account.name" name="name"></ion-input>\n      </ion-item>\n\n      <ion-item>\n        <ion-input placeholder="Email" type="email" [(ngModel)]="account.email" name="email"></ion-input>\n      </ion-item>\n\n      <ion-item>\n        <ion-input placeholder="Password" type="password" [(ngModel)]="account.password" name="password"></ion-input>\n      </ion-item>\n\n      <div padding>\n        <button ion-button color="primary" block>signup</button>\n      </div>\n\n    </ion-list>\n  </form>\n</ion-content>\n'/*ion-inline-end:"/home/inkremental-7/Prueba-ionic/src/pages/signup/signup.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */],
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
             __WEBPACK_IMPORTED_MODULE_2__providers_user_user__["a" /* UserProvider */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* ToastController */]])
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ToastController */]])
     ], SignupPage);
     return SignupPage;
 }());
@@ -589,19 +597,21 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_buildings_buildings__ = __webpack_require__(203);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_list_requisitions_list_requisitions__ = __webpack_require__(51);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_requisitions_requisitions__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__angular_common_http__ = __webpack_require__(102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__angular_common_http__ = __webpack_require__(52);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_requisition_detail_requisition_detail__ = __webpack_require__(201);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_create_requisitions_create_requisitions__ = __webpack_require__(202);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_edit_requisition_edit_requisition__ = __webpack_require__(101);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_edit_requisition_edit_requisition__ = __webpack_require__(102);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_signup_signup__ = __webpack_require__(206);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_login_login__ = __webpack_require__(205);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__providers_user_user__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__providers_book_service_book_service__ = __webpack_require__(284);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -638,7 +648,9 @@ var AppModule = /** @class */ (function () {
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */], {}, {
-                    links: []
+                    links: [
+                        { loadChildren: '../pages/books/books.module#BooksPageModule', name: 'BooksPage', segment: 'books', priority: 'low', defaultHistory: [] }
+                    ]
                 }),
                 __WEBPACK_IMPORTED_MODULE_10__angular_common_http__["b" /* HttpClientModule */]
             ],
@@ -659,7 +671,8 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */],
                 { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicErrorHandler */] },
                 __WEBPACK_IMPORTED_MODULE_9__providers_requisitions_requisitions__["a" /* RequisitionsProvider */],
-                __WEBPACK_IMPORTED_MODULE_16__providers_user_user__["a" /* UserProvider */]
+                __WEBPACK_IMPORTED_MODULE_16__providers_user_user__["a" /* UserProvider */],
+                __WEBPACK_IMPORTED_MODULE_17__providers_book_service_book_service__["a" /* BookServiceProvider */]
             ]
         })
     ], AppModule);
@@ -722,13 +735,13 @@ var MyApp = /** @class */ (function () {
         this.text = text;
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* Nav */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* Nav */])
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Nav */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Nav */])
     ], MyApp.prototype, "nav", void 0);
     MyApp = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/home/inkremental-7/Prueba-ionic/src/app/app.html"*/'<ion-menu id="leftMenu" [content]="content" type="overlay">\n \n  <ion-header no-border padding>\n    <ion-toolbar>\n        <img src="assets/imgs/logo4.png" alt="logo2"> \n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content>\n    <ion-list padding>\n      <button  menuClose ion-item icon-start (click)="openPage(pages[0])">\n        <ion-icon class="iconm" name="home"></ion-icon>Home\n      </button>\n      <button  menuClose ion-item icon-start (click)="openPage(pages[1])">\n        <ion-icon class="iconm" name="list-box"></ion-icon>Mis Tareas\n      </button>\n      <button  menuClose ion-item icon-start (click)="openPage(pages[2])">\n        <ion-icon class="iconm" name="list"></ion-icon>Lista de Compras\n      </button>\n      <button  menuClose ion-item icon-start (click)="openPage(pages[1])">\n        <ion-icon class="iconm" name="book"></ion-icon>Libros\n      </button>\n        <button   menuClose ion-item icon-start (click)="openPage(pages[1])">\n          <ion-icon class="iconm" name="settings"></ion-icon>Configuración\n          </button>\n    </ion-list>\n  </ion-content>\n</ion-menu>\n\n<ion-nav id="nav" #content [root]="rootPage"></ion-nav>'/*ion-inline-end:"/home/inkremental-7/Prueba-ionic/src/app/app.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
     ], MyApp);
     return MyApp;
 }());
@@ -737,12 +750,53 @@ var MyApp = /** @class */ (function () {
 
 /***/ }),
 
+/***/ 284:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BookServiceProvider; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/*
+  Generated class for the BookServiceProvider provider.
+
+  See https://angular.io/guide/dependency-injection for more info on providers
+  and Angular DI.
+*/
+var BookServiceProvider = /** @class */ (function () {
+    function BookServiceProvider(http) {
+        this.http = http;
+        this.url = "https://www.googleapis.com/books/v1/volumes?q=harry+potter&callback=handleResponse";
+        console.log('Hello BookServiceProvider Provider');
+    }
+    BookServiceProvider = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["A" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */]])
+    ], BookServiceProvider);
+    return BookServiceProvider;
+}());
+
+//# sourceMappingURL=book-service.js.map
+
+/***/ }),
+
 /***/ 41:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RequisitionsProvider; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(52);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -832,7 +886,7 @@ var RequisitionsProvider = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__requisition_detail_requisition_detail__ = __webpack_require__(201);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_requisitions_requisitions__ = __webpack_require__(41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__create_requisitions_create_requisitions__ = __webpack_require__(202);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__edit_requisition_edit_requisition__ = __webpack_require__(101);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__edit_requisition_edit_requisition__ = __webpack_require__(102);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -919,10 +973,9 @@ var ListRequisitionsPage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-list-requisitions',template:/*ion-inline-start:"/home/inkremental-7/Prueba-ionic/src/pages/list-requisitions/list-requisitions.html"*/'<!--\n  Generated template for the ListRequisitionsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n\n<ion-header>\n  <ion-navbar color="navbarColor">\n    <ion-title>Tareas</ion-title>\n    <button ion-button menuToggle >\n      <ion-icon name="menu" ></ion-icon>\n    </button>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  \n  <ion-label color=\'primary\' item-end text-right> <ion-icon  class="arrow" name="ios-arrow-back" > </ion-icon> </ion-label>\n  \n  <ion-fab bottom right >\n  <button ion-fab color="primary"  (click)="addRequisition()" ><ion-icon name="add"></ion-icon></button>\n  </ion-fab>\n  <ion-list>\n\n    <ion-item-sliding *ngFor="let item of getList()">\n      <ion-item >\n              <h2> {{ item.title }} </h2>\n              <p color=\'text\'> {{item.date | date: \'d MMM\' }} </p>\n\n              <ion-icon name="star" class="starIcon" *ngIf="item.priority == true" item-end> </ion-icon>\n            \n        \n      </ion-item>\n      <ion-item-options  side="right">\n        <button style="border-left: 2px solid gray " class="buttonIcon" ion-button clear (click)="openRequisition(item)">\n          <ion-icon class="eyeIcon" name="eye"> </ion-icon>\n        </button>\n        <button class="buttonIcon" ion-button clear (click)="editRequisition(item)">\n          <ion-icon class="editIcon" name="create"> </ion-icon>\n        </button>\n        <button class="buttonIcon" ion-button clear (click)="deleteRequisition(item)">\n          <ion-icon class="trashIcon" name="trash"> </ion-icon>\n        </button>\n      </ion-item-options>\n    </ion-item-sliding>\n    \n  </ion-list>\n</ion-content>\n\n<ion-footer>\n  <ion-grid>\n    <ion-row>\n      <ion-col text-center col-4>\n        <button class="buttonf" ion-button clear (click)="changeFilter(\'today\')">\n          <ion-icon class="iconf" name="clock"> </ion-icon>\n        </button>\n      </ion-col>\n      <ion-col text-center col-4>\n        <button class="buttonf" ion-button clear (click)="changeFilter(\'tomorrow\')">\n          <ion-icon class="iconf" name="partly-sunny"> </ion-icon>\n        </button>\n        \n      </ion-col>\n      <ion-col text-center col-4>\n        <button class="buttonf" ion-button clear (click)="changeFilter(\'priority\')">\n          <ion-icon class="iconf" name="star"> </ion-icon>\n        </button>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n</ion-footer>'/*ion-inline-end:"/home/inkremental-7/Prueba-ionic/src/pages/list-requisitions/list-requisitions.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__providers_requisitions_requisitions__["a" /* RequisitionsProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_requisitions_requisitions__["a" /* RequisitionsProvider */]) === "function" && _c || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__providers_requisitions_requisitions__["a" /* RequisitionsProvider */]])
     ], ListRequisitionsPage);
     return ListRequisitionsPage;
-    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=list-requisitions.js.map

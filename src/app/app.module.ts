@@ -16,6 +16,7 @@ import { SignupPage } from '../pages/signup/signup';
 import { LoginPage } from '../pages/login/login';
 import { UserProvider } from '../providers/user/user';
 import { ProfilePage } from '../pages/profile/profile';
+import { BookServiceProvider } from '../providers/book-service/book-service';
 @NgModule({
   declarations: [
     MyApp,
@@ -50,7 +51,8 @@ import { ProfilePage } from '../pages/profile/profile';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     RequisitionsProvider,
-    UserProvider
+    UserProvider,
+    BookServiceProvider
   ]
 })
 export class AppModule {}
